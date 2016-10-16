@@ -1,0 +1,44 @@
+}
+
+img {
+	height: 320px;
+	width: 234px;
+}
+
+ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+span {
+	padding: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+li {
+	padding: 5px;
+	margin: 5px;
+}
+
+form.devour {
+	display: inline-block;
+}
+
+#waitList {
+	width: 40%;
+}
+
+#devouredList {
+	width: 40%;
+}
+
+#addSection {
+	width: 80%;
+/*	clear: both;*/
+}
+
+div input {  /*Add a Burger text input width*/
+	width: 450px;
+}

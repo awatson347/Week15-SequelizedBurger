@@ -1,0 +1,50 @@
+<h1>Wowza Burgers!</h1>
+
+<wrapper>
+  <span id="waitList">
+    <h2>Burgers waiting for you!</h2>
+
+    <ul>
+      {{#each burgers}}
+        {{#unless this.devoured}}
+          <li>
+            {{this.burger_name}}
+
+            <form class="devour" action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+              <input type="hidden" name="devoured" value="true">
+              <button type="submit" class="inline">Devour it!</button>
+            </form>
+
+          </li>
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </span>
+
+  <span id="devouredList">
+    <h2>Burgers that are devoured!</h2>
+
+    <ul>
+      {{#each burgers}}
+        {{#if this.devoured}}
+          <li>
+            {{this.burger_name}}   
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </span>
+</wrapper>
+
+<span id="addSection">
+  <h2>Add a Burger to the Waitlist!</h2>
+  <form class="create-update-form" action="burgers/create" method="POST">
+
+    <div class="form-group">
+  <!--     <label for="newBurger">Burger Name:</label> -->
+      <input type="text" id="newBurger" name="name">
+    </div>
+
+    <button type="submit">Submit tasty goodness!</button>
+  </form>
+</span>
