@@ -3,7 +3,7 @@ Here is where you create all the functions that will do the routing for your app
 */
 
 // Dependencies
-// =============================================================
+
 var express = require('express');
 var router = express.Router();
 
@@ -11,7 +11,7 @@ var orm = require('../models')["Burger"];
 
 
 // Routes
-// =============================================================
+
 router.get('/', function (req, res) {
 	res.redirect('/burgers');
 });
